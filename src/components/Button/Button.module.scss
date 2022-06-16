@@ -20,6 +20,11 @@
     margin-left: 10px;
 }
 
+.icon {
+    display: inline-block;
+    width: 20px;
+}
+
 // Button styles
 .basic {
     color: rgba(0, 0, 0, 0.8);
@@ -62,6 +67,23 @@
         color: var(--primary-hover);
         border-color: var(--primary-hover);
         background-color: rgba(0, 0, 0, 0.08);
+    }
+}
+
+.item {
+    font-size: 1.6rem;
+    background-color: #fff;
+    margin-left: 0px !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: normal;
+    padding: 7px 0 7px 10px;
+    line-height: 20px;
+    display: flex;
+    justify-content: flex-start;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
     }
 }
 

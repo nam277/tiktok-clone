@@ -19,6 +19,7 @@ function Button({
     className = false,
     leftIcon,
     rightIcon,
+    item,
     ...passProps
 }) {
     let Comp = 'button';
@@ -51,14 +52,13 @@ function Button({
         primary,
         outline,
         rounded,
+        item,
         disabled,
         small,
         medium,
         large,
         [className]: className,
     });
-
-    console.log(className);
 
     return (
         <Comp className={classes} {...props}>

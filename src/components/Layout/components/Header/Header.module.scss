@@ -113,6 +113,15 @@
     }
 }
 
-.custom-btn {
-    font-weight: bolder;
+.actions {
+    display: flex;
+}
+
+.more-btn {
+    font-size: 1.8rem;
+    margin-left: 14px;
+    padding: 0 8px;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: transparent;
 }
