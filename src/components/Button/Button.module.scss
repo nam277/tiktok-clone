@@ -1,0 +1,82 @@
+.wrapper {
+    font-size: 1.6rem;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    user-select: none;
+
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    + .wrapper {
+        margin-left: 16px;
+    }
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 10px;
+}
+
+// Button styles
+.basic {
+    color: rgba(0, 0, 0, 0.8);
+    &:hover {
+        border-color: rgba(0, 0, 0, 0.18);
+        background-color: rgba(0, 0, 0, 0.08);
+    }
+}
+
+.rounded {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10000px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+
+    &:hover {
+        border-color: rgba(0, 0, 0, 0.28);
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.primary {
+    min-width: 100px;
+    height: 36px;
+    font-weight: bolder;
+    background-color: var(--primary);
+    color: #fff;
+
+    &:hover {
+        border-color: var(--primary);
+        background-color: var(--primary-hover);
+    }
+}
+
+.outline {
+    color: var(--primary);
+    border-color: var(--primary);
+    background-color: #fff;
+
+    &:hover {
+        color: var(--primary-hover);
+        border-color: var(--primary-hover);
+        background-color: rgba(0, 0, 0, 0.08);
+    }
+}
+
+// Button size
+.medium {
+    min-width: 100px;
+    height: 36px;
+}
+
+.small {
+    min-width: 88px;
+    height: 28px;
+}
+
+.large {
+    min-width: 156px;
+    height: 36px;
+}

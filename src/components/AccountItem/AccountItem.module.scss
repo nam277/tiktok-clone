@@ -1,0 +1,44 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.avatar {
+    margin-right: 6px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 12px;
+}
+
+.info {
+    flex: 1;
+    line-height: 100%;
+}
+
+.names {
+    font-size: 1.5rem;
+
+    .name-icon {
+        color: rgba(20, 211, 211, 0.8);
+    }
+}
+
+.name {
+    margin-right: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-weight: bolder;
+}
+
+.userName {
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Times New Roman', Times, serif;
+}
