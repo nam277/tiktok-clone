@@ -19,12 +19,14 @@ function Button({
     className = false,
     leftIcon,
     rightIcon,
+    onClick,
     item,
     ...passProps
 }) {
     let Comp = 'button';
 
     const props = {
+        onClick,
         ...passProps,
     };
 
