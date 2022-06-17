@@ -115,6 +115,24 @@
 
 .actions {
     display: flex;
+    align-items: center;
+}
+
+.active-btn {
+    height: 32px;
+    width: 32px;
+    font-size: 2.5rem;
+    margin: 0 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.user-avatar {
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 .more-btn {

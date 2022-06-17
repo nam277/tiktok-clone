@@ -28,12 +28,28 @@ body {
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     color: var(--text-color);
+
+    .tippy-box {
+        border-radius: 8px;
+        line-height: 2.2rem;
+        background-color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+        top: -1px !important;
+    }
 }
 
 button,
 input,
 [tabindex] {
     outline: none;
+}
+
+button {
+    background-color: transparent;
+    border-color: transparent;
 }
 
 a[href] {

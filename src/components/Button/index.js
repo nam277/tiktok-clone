@@ -20,6 +20,7 @@ function Button({
     leftIcon,
     rightIcon,
     onClick,
+    separate,
     item,
     ...passProps
 }) {
@@ -59,6 +60,7 @@ function Button({
         small,
         medium,
         large,
+        separate,
         [className]: className,
     });
 
