@@ -32,6 +32,8 @@ import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import { faHandPaper, faKeyboard, faMessage, faNewspaper } from '@fortawesome/free-regular-svg-icons';
 import { faFacebookMessenger } from '@fortawesome/free-brands-svg-icons';
+import { Inbox, Message } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 const currentUser = true;
@@ -143,14 +145,14 @@ function Header() {
                             <Button basic medium leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                                 Upload
                             </Button>
-                            <Tippy delay={[0, 0]} placement="bottom" content="Message">
-                                <button className={cx('active-btn')}>
-                                    <FontAwesomeIcon icon={faPaperPlane} />
+                            <Tippy delay={[0, 0]} placement="bottom-end" content="Message">
+                                <button className={cx('cover-btn')}>
+                                    <Message className={cx('active-btn')} />
                                 </button>
                             </Tippy>
-                            <Tippy delay={[0, 0]} placement="bottom" content="Inbox">
-                                <button className={cx('active-btn')}>
-                                    <FontAwesomeIcon icon={faMessage} />
+                            <Tippy delay={[0, 0]} placement="bottom-end" content="Inbox">
+                                <button className={cx('cover-btn')}>
+                                    <Inbox className={cx('active-btn')} />
                                 </button>
                             </Tippy>
                         </>
@@ -164,10 +166,11 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
-                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/d7744de2de90b8ea5df1b577cb644c9a~c5_100x100.jpeg?x-expires=1655622000&x-signature=vm97kQ8GRgyArV%2BixB2u9GaBtek%3D"
+                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/fac92301a36c2275c99f393061ef04ca~c5_100x100.jpeg?x-expires=1655690400&x-signature=326y0vZeB1nBnESA%2BCW6NzHEmyM%3D"
                                 alt="Phuong Nam"
+                                fallback={images.defaultImg}
                             />
                         ) : (
                             <button className={cx('more-btn')}>
