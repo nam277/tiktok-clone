@@ -27,92 +27,6 @@
     align-items: center;
 }
 
-.search-result {
-    width: var(--search-width);
-    margin-top: 10px;
-
-    .accounts {
-        font-size: 1.5rem;
-        margin-left: 10px;
-        color: rgba(0, 0, 0, 0.4);
-    }
-}
-
-.search {
-    position: relative;
-    width: var(--search-width);
-    height: 46px;
-    padding-left: 16px;
-    background-color: rgba(22, 24, 35, 0.06);
-    display: flex;
-    align-items: center;
-    border-radius: var(--input-border-radius);
-    border: 2px solid transparent;
-    overflow: hidden;
-
-    input {
-        flex: 1;
-        height: 100%;
-        border: none;
-        background-color: transparent;
-        font-size: 1.6rem;
-        letter-spacing: 1px;
-        caret-color: var(--primary);
-    }
-
-    input:not(:placeholder-shown) ~ .search-btn {
-        color: rgba(25, 24, 35, 0.75);
-    }
-
-    &:focus-within {
-        border-color: rgba(0, 0, 0, 0.2);
-    }
-}
-
-.clear,
-.loading {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    right: calc(var(--search-button-width) + 16px);
-    width: 16px;
-    height: 16px;
-    color: rgba(0, 0, 0, 0.2);
-}
-
-.search-btn {
-    position: absolute;
-    right: 0;
-    height: 100%;
-    width: var(--search-button-width);
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: transparent;
-    font-size: 2rem;
-    color: rgba(0, 0, 0, 0.2);
-
-    &::after {
-        content: '';
-        height: 60%;
-        width: 1px;
-        background-color: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-    }
-
-    &:hover {
-        background-color: rgba(22, 24, 35, 0.03);
-    }
-
-    &:active {
-        background-color: rgba(22, 24, 35, 0.06);
-    }
-}
-
 .actions {
     display: flex;
     align-items: center;
@@ -122,10 +36,27 @@
     display: flex;
     align-items: center;
     height: 30px;
+    margin-left: 20px;
     .active-btn {
-        margin-left: 20px;
         background-color: transparent;
         cursor: pointer;
+    }
+}
+
+.message {
+    position: relative;
+    margin-left: 10px;
+    &::before {
+        content: '20';
+        padding: 2px 5px;
+        position: absolute;
+        font-size: 1.1rem;
+        top: -20%;
+        right: -5px;
+        color: #fff;
+        font-weight: bolder;
+        border-radius: 99999px;
+        background-color: var(--primary-icon);
     }
 }
 
