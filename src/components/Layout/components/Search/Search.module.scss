@@ -26,9 +26,10 @@
         height: 100%;
         border: none;
         background-color: transparent;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         letter-spacing: 1px;
         caret-color: var(--primary);
+        font-family: var(--font-family);
     }
 
     input:not(:placeholder-shown) ~ .search-btn {
