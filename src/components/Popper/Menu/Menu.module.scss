@@ -3,6 +3,10 @@
     width: 200px;
 }
 
+.menu-body {
+    overflow-y: auto;
+}
+
 .separate {
     border-top: 1px solid rgba(0, 0, 0, 0.28);
 }
@@ -12,6 +16,8 @@
     position: relative;
     display: flex;
     margin-top: -4px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     height: 40px;
     justify-content: center;
     align-items: center;

@@ -3,10 +3,8 @@ import styles from './Popper.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Wrapper({ scroll, children }) {
-    const classes = cx('wrapper', {
-        scroll,
-    });
+function Wrapper({ children }) {
+    const classes = cx('wrapper');
 
     return <div className={classes}>{children}</div>;
 }
