@@ -9,7 +9,7 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import { SearchBtn } from '~/components/Icons';
 import { useDebounce } from '~/hooks';
-import * as apiServices from '~/apiServices/searchServices';
+import * as services from '~/services/searchService';
 
 const cx = classNames.bind(styles);
 
@@ -29,7 +29,7 @@ const Search = () => {
         }
         const fetchApi = async () => {
             setShowLoading(true);
-            const result = await apiServices.search(debounceInput, 'less');
+            const result = await services.search(debounceInput, 'less');
             setSearchResult(result);
             setShowLoading(false);
         };

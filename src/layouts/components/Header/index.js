@@ -10,7 +10,7 @@ import {
     faSignOut,
     faUsersGear,
 } from '@fortawesome/free-solid-svg-icons';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
@@ -85,7 +85,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logo')}>
+                <Link to={config.routes.home} className={cx('logo')}>
                     <img src={images.logo} alt="tiktok" />
                 </Link>
 
