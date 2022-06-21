@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import styles from './Button.module.scss';
@@ -21,7 +22,7 @@ function Button({
     rightIcon,
     onClick,
     separate,
-    item,
+    item = false,
     ...passProps
 }) {
     let Comp = 'button';
@@ -33,6 +34,7 @@ function Button({
 
     // Remove event listeners when the btn is disabled
     if (disabled) {
+        // eslint-disable-next-line array-callback-return
         Object.keys(props).map((propKey) => {
             if (propKey.startsWith('on') && typeof props[propKey] === 'function') {
                 delete props[propKey];
@@ -72,5 +74,25 @@ function Button({
         </Comp>
     );
 }
+
+Button.propTypes = {
+    children: PropTypes.string,
+    to: PropTypes.string,
+    href: PropTypes.string,
+    basic: PropTypes.bool,
+    primary: PropTypes.bool,
+    outline: PropTypes.bool,
+    small: PropTypes.bool,
+    medium: PropTypes.bool,
+    large: PropTypes.bool,
+    disabled: PropTypes.bool,
+    rounded: PropTypes.bool,
+    className: PropTypes.string,
+    leftIcon: PropTypes.node,
+    rightIcon: PropTypes.node,
+    onClick: PropTypes.func,
+    separate: PropTypes.string,
+    item: PropTypes.bool,
+};
 
 export default Button;
