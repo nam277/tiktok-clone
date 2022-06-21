@@ -1,16 +1,13 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faCircleXmark,
     faCoins,
     faEllipsisVertical,
-    faMagnifyingGlass,
     faPersonRifle,
     faPlus,
     faQuestionCircle,
     faSignLanguage,
     faSignOut,
-    faSpinner,
     faUsersGear,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
